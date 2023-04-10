@@ -1,0 +1,161 @@
+html {
+  background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=5);
+  background-size: cover;
+  font-family: "helvetica neue";
+  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  //   display: flex;
+  //   flex: 1;
+  min-height: 100vh;
+  //   align-items: center;
+  position: relative;
+}
+.clock {
+  position: absolute;
+  top: calc(50% - 15rem);
+  left: calc(50% - 15rem);
+}
+
+.clock-face {
+  width: 30rem;
+  height: 30rem;
+  position: absolute;
+  //   top: calc(50% - 15rem);
+  //   left: calc(50% - 15rem);
+  border-radius: 50%;
+
+  border: 5px solid white;
+  margin: 50px auto;
+  padding: 2rem;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+    inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+// .clock-face {
+//   position: relative;
+//   width: 100%;
+//   height: 100%;
+//   transform: translateY(-3px); /* account for the height of the clock hands */
+// }
+
+//
+// CSS is copied from https://stackoverflow.com/questions/63757429/how-to-make-clock-hands-move-rotate-html-css
+//
+//
+.hand {
+  width: 0px;
+  box-sizing: border-box;
+
+  position: absolute;
+  transform-origin: bottom;
+}
+
+// keyframe animation is not required as it is controlled from JS now
+@keyframes secondsMotion {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.second-hand {
+  top: 2rem;
+  height: calc(50% - 2rem);
+  rotate: 180deg;
+  border: 1px solid rgb(250, 7, 7);
+  left: 50%;
+  //   Not required as rotation is done from Javascript
+  //   animation: secondsMotion 60s infinite linear;
+}
+
+.min-hand {
+  top: 4rem;
+  height: calc(50% - 4rem);
+  rotate: 180deg;
+  border: 2px solid rgb(8, 241, 8);
+  left: 50%;
+  //   Not required as rotation is done from Javascript
+  //   animation: secondsMotion 3600s infinite linear;
+}
+
+.hour-hand {
+  top: 6rem;
+  height: calc(50% - 6rem);
+  //   rotate: 75deg;
+  border: 3px solid rgb(8, 8, 8);
+  left: 50%;
+  //   Not required as rotation is done from Javascript
+  //   animation: secondsMotion 43200s infinite linear;
+}
+
+.hours {
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+}
+.twelve {
+  top: 5px;
+  left: calc(50% - 10px);
+}
+
+.one {
+  //   right: calc(33.33% - 10px);
+  left: calc(75% - 10px);
+  top: 30px;
+}
+
+.two {
+  left: calc(92% - 10px);
+  top: 82px;
+}
+
+.three {
+  right: 5px;
+  top: calc(50% - 10px);
+}
+
+.four {
+  left: calc(92% - 10px);
+  bottom: 82px;
+}
+.five {
+  //   right: calc(33.33% - 10px);
+  left: calc(75% - 10px);
+  bottom: 30px;
+}
+
+.six {
+  bottom: 5px;
+  left: calc(50% - 10px);
+}
+.seven {
+  //   right: calc(33.33% - 10px);
+  right: calc(75% - 10px);
+  bottom: 30px;
+}
+.eight {
+  right: calc(92% - 10px);
+  bottom: 82px;
+}
+.nine {
+  left: 5px;
+  top: calc(50% - 10px);
+}
+
+.ten {
+  right: calc(90% - 10px);
+  top: 82px;
+}
+
+.eleven {
+  right: calc(75% - 10px);
+  top: 30px;
+}
